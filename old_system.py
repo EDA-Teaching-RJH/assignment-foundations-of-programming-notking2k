@@ -49,9 +49,9 @@ def run_system_monolith():
             n.pop (idx)
         else:
             print("name not found.")    
-        if idx < len(r)
+        if idx < len(r):
             r.pop(idx)
-        if idx < len(d)
+        if idx < len(d):
             d.pop(idx)
             print("Removed.")
             
