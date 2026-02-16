@@ -29,4 +29,29 @@ def display_roster(names, ranks, divs, ids):
     print("\n---CREW ROSTER---")
     for i in range(len(names)):
         print(ids[i], names[i], ranks[i], divs[i])
+
+def add_member(names, ranks, divs, ids):
+    name = input("name: ") 
+    new_id = iput ("ID: ")
+
+    if new_id in ids: 
+       print("ID already exists.")
+       return 
+
+    rank = input("rank: ")
+    valid_ranks = ["Capain, "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
+                   
+    if rank not in valid-ranks: 
+    print("invalid rank.")
+    return 
+
+
+    div = input("division (command/operations/sciences): ") 
+
+    names.append(name)
+    ranks.append(rank)
+    divs.append(div)
+    ids.append(new_id)
+
+    print("member added.") 
     
