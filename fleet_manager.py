@@ -70,4 +70,19 @@ def remove_member(names, ranks, divs, ids):
     ids.pop(index)
 
     print("member removed.")
+
+def update_rank(names, ranks, ids):
+    target = input("enter id to uodate: ") 
+
+
+    if target not in ids: 
+       print("id not fonund.")
+       return 
+
+
+    index = ids.index(target)
+    new_rank = input("new rank: ")
+
+    ranks[index] = new_rank 
+    print("rank updated.") 
     
