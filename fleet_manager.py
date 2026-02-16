@@ -121,10 +121,12 @@ def calculate_payroll(ranks):
            total += 200
 
 def count_officers(ranks): 
-count = 0 
-for rank in ranks 
-    if rank == "captain" or rank == "commander": 
-       count += 1 
-return count 
+    count = 0
+    for rank in ranks: 
+        if rank == "captain" or rank == "commmander": 
+           count += 1
+    return count 
+
+
 
     
