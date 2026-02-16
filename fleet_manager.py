@@ -97,4 +97,11 @@ def search_crew(names, ranks, divs, ids):
         
     if found == False: 
         print("no matches found")
+
+def filter_by_division(names, divs):
+    division = input("Divison (comman/operarions/sciences): ")
+
+for i in range (len(names)):
+    if divs[i] == division: 
+       print(names[i], divs[i])
     
