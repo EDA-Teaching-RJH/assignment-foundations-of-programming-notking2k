@@ -44,16 +44,14 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-            if rem in n:  
+        if rem in n:  
             idx = n.index(rem)
             n.pop (idx)
         else:
             print("name not found.")    
-            idx = n.index(rem)
-            n.pop(idx)
-            if idx < len(r)
+        if idx < len(r)
             r.pop(idx)
-            if idx < len(d)
+        if idx < len(d)
             d.pop(idx)
             print("Removed.")
             
