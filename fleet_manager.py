@@ -85,4 +85,16 @@ def update_rank(names, ranks, ids):
 
     ranks[index] = new_rank 
     print("rank updated.") 
+
+def search_crew(names, ranks, divs, ids): 
+    term = input("search name: ").lowe()
+
+    found = False 
+    for i in range(len(names)):
+        if term in names[i].lower():
+           print(ids[i], names[i], ranks[i], divs[i]
+                 found = True 
+        
+    if found == False: 
+        print("no matches found")
     
