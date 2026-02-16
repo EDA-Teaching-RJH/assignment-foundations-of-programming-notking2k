@@ -127,6 +127,41 @@ def count_officers(ranks):
            count += 1
     return count 
 
+def main (): 
+    names, ranks, divs, ids = init_databse() 
+    user = "" 
+
+    while True: 
+        choice, user = display_menu(user) 
+        
+         if choice == "1"
+             display_roster(names, ranks,divs,ids)
+        elif choice == "2" 
+            add_member(names, ranks, divs, ids) 
+        elif choice == "3" 
+            remove_member (names,ranks divs, ids)
+        elif choice == "4":
+            update_rank(names, ranks, ids)
+        elif choice == "5":
+            search_crew(names, ranks, divs, ids)
+        elif choice == "6":
+            filter_by_division(names, divs)
+        elif choice == "7":
+            print("Total payroll:", calculate_payroll(ranks))
+        elif choice == "8":
+            print("Officer count:", count_officers(ranks))
+        elif choice == "9":
+            names, ranks, divs, ids = init_database()
+            print("Database reset.")
+        elif choice == "0":
+            print("Goodbye.")
+            break
+        else:
+            print("Invalid option.")
+
+
+main()
+
 
 
     
