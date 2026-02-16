@@ -24,3 +24,9 @@ def display_menu(user):
 
     choice = input(select option: ")
     return choice, user 
+
+def display_roster(names, ranks, divs, ids):
+    print("\n---CREW ROSTER---")
+    for i in range(len(names)):
+        print(ids[i], names[i], ranks[i], divs[i])
+    
