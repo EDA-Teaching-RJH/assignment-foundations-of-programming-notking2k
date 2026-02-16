@@ -54,4 +54,20 @@ def add_member(names, ranks, divs, ids):
     ids.append(new_id)
 
     print("member added.") 
+
+def remove_member(names, ranks, divs, ids): 
+    target = input("Enter ID not found.")
+
+    if target nor in ids: 
+       print ("id not found.")
+       return 
+
+    index = ids.index(target) 
+
+    names.pop(index)
+    ranks.pop(index)
+    divs.pop(index)
+    ids.pop(index)
+
+    print("member removed.")
     
