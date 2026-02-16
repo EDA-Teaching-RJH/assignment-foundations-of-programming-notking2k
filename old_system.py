@@ -58,7 +58,7 @@ def run_system_monolith():
             print("Removed.")
             
         elif opt == "4":
-        print("Analyzing...")
+             print("Analyzing...")
             count = 0
             
             for rank in r:
