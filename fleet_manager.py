@@ -1,13 +1,13 @@
 def init_database():
-    names = ["Picard" "Riker","Data","Worf","Crusher"]
-    ranks = ["Captain","Commander,"Lt.Commander","lieutenant","ensign"]
-    divs = ["command","operations","operations","sciences"]
+    names = ["Picard","Riker","Data","Worf","Crusher"]
+    ranks = ["Captain","Commander", "lt. commander","lieutenant", "ensign"]
+    divs = ["command", "command", "operations", "operations", "sciences"]
     ids = ["001","002","003","004","005"]
     return names, ranks, divs, ids 
 
 def display_menu(user):
-    if user ==""
-        user = (input("Enter your full name: ")
+    if user =="":
+        user = (input("Enter your full name: "))
                 
     print ("\n---MENU---")
     print ("Logged in as:", user)
@@ -22,7 +22,7 @@ def display_menu(user):
     print ("9. reset database")
     print ("0. exit") 
 
-    choice = input(select option: ")
+    choice = input("select option. ")
     return choice, user 
 
 def display_roster(names, ranks, divs, ids):
@@ -32,18 +32,18 @@ def display_roster(names, ranks, divs, ids):
 
 def add_member(names, ranks, divs, ids):
     name = input("name: ") 
-    new_id = iput ("ID: ")
+    new_id = input("id: ")
 
     if new_id in ids: 
        print("ID already exists.")
        return 
 
     rank = input("rank: ")
-    valid_ranks = ["Capain, "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
+    valid_ranks = ["Captain", "commander", "lt. commander", "lieutenant", "ensign"]
                    
-    if rank not in valid-ranks: 
-    print("invalid rank.")
-    return 
+    if rank not in valid_ranks:
+        print("invalid rank")
+        return 
 
 
     div = input("division (command/operations/sciences): ") 
@@ -58,7 +58,7 @@ def add_member(names, ranks, divs, ids):
 def remove_member(names, ranks, divs, ids): 
     target = input("Enter ID not found.")
 
-    if target nor in ids: 
+    if target not in ids:
        print ("id not found.")
        return 
 
@@ -92,18 +92,18 @@ def search_crew(names, ranks, divs, ids):
     found = False 
     for i in range(len(names)):
         if term in names[i].lower():
-           print(ids[i], names[i], ranks[i], divs[i]
-                 found = True 
+           print(ids[i], names[i], ranks[i], divs[i])
+        found = True 
         
     if found == False: 
         print("no matches found")
 
 def filter_by_division(names, divs):
-    division = input("Divison (comman/operarions/sciences): ")
+    division = input("Divison (command/operations/sciences): ")
 
-for i in range (len(names)):
-    if divs[i] == division: 
-       print(names[i], divs[i])
+    for i in range (len(names)):
+        if divs[i] == division: 
+            print(names[i],divs[i])
 
 def calculate_payroll(ranks):
     total = 0 
@@ -128,18 +128,18 @@ def count_officers(ranks):
     return count 
 
 def main (): 
-    names, ranks, divs, ids = init_databse() 
+    names, ranks, divs, ids = init_database() 
     user = "" 
 
     while True: 
         choice, user = display_menu(user) 
-        
-         if choice == "1"
+
+        if choice == "1":
              display_roster(names, ranks,divs,ids)
-        elif choice == "2" 
+        elif choice == "2":
             add_member(names, ranks, divs, ids) 
-        elif choice == "3" 
-            remove_member (names,ranks divs, ids)
+        elif choice == "3" :
+            remove_member(names, ranks, divs, ids)
         elif choice == "4":
             update_rank(names, ranks, ids)
         elif choice == "5":
@@ -158,10 +158,3 @@ def main ():
             break
         else:
             print("Invalid option.")
-
-
-main()
-
-
-
-    
